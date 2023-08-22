@@ -1,26 +1,7 @@
-# SyncMyCookie
-[English](https://github.com/Andiedie/sync-my-cookie/blob/master/README.md) | [中文](https://blog.andiedie.cn/posts/abbd/)
-
-SyncMyCookie is a chrome extension to synchronize your cookies.
+# SessionShare
+SessionShare is a chrome extension to synchronize your session across multiple devices. This project is forked from Sync-My-Cookie (https://github.com/Andiedie/sync-my-cookie) and improves on it.
 
 You can specify to sync cookies for any website, configure rules for `Auto Merge` and `Auto Push`.
-
-## Install
-- Recommended: [Chrome Web Store](https://chrome.google.com/webstore/detail/syncmycookie/laapobniolmbhnkldepjnebendehhmmf)
-- [SyncMyCookie.crx](https://github.com/andiedie/sync-my-cookie/releases/download/v2.0.0/crx.zip)
-- [Pre Built](https://github.com/andiedie/sync-my-cookie/releases/download/v2.0.0/pre-built.zip)
-
-  Enable the `Developer mode` in the Chrome Extension(`chrome://extensions`) and load it via `Load Unpacked`.
-  
-- Build from Source
-
-  ```bash
-  git clone https://github.com/Andiedie/sync-my-cookie.git
-  cd sync-my-cookie
-  yarn            # npm install
-  yarn build      # npm run build
-  ```
-  And load folder `build` just like the above method.
 
 ## Scenes to be used
 ### Avoid frequent logins
@@ -34,14 +15,14 @@ Maybe you have the following requirements:
 - Break the limit of single sign-on
 - Sync login status across multiple browsers
 
-Using SyncMyCookie can easily meet the above requirements.
+Using SessionShare can easily meet the above requirements.
 
 You can log in on one browser and enable `Auto Push`. On other browsers, enable `Auto Merge` so your login status will sync across these browsers.
   
 ## Configuration
 In order to share cookies across devices, this extension encrypts your cookies and save them in Gist, which requires you to have a GitHub account.
 
-If you have suggestions for using other types of storage to save data, please create an issue [here](https://github.com/Andiedie/sync-my-cookie/issues).
+If you have suggestions for using other types of storage to save data, please create an issue.
 
 ### Generate GitHub Access Token
 GitHub Access Token (token for short) allows the extension to modify your Gist. You can generate a new token [here](https://github.com/settings/tokens/new).
@@ -50,7 +31,7 @@ GitHub Access Token (token for short) allows the extension to modify your Gist. 
 
 ![token scopes](./assets/docs/token_scopes.jpg)
 
-SyncMyCookie only needs Gist scope, so please don't check other unnecessary scopes for your account security.
+SessionShare only needs Gist scope, so please don't check other unnecessary scopes for your account security.
 
 ### Configure Extension
 Right click on the extension and click on `Options`.
@@ -113,6 +94,26 @@ By using `HTTPS` and `AES-128-CBC`, this extension guarantees that your cookies 
 - To keep your cookies safe, please don't disclose your configuration, especially your password. This will cause your cookies to be completely exposed to others.
 - This extension guarantees that only the Gist scope of the GitHub Access Token will be used. To prevent potential security issues, please only check Gist scope when generating token.
 - In theory, multiple devices using the same cookie can use some services at the same time, but this is related to the service provider's detection mechanism. So the risk of using this extension for account sharing is uncertain.
+
+## Changelog
+Version 1.0.2
+---------------------------------------------------------------------------------------------------------------------------------------------
+- Minor patch
+
+Version 1.0.1
+---------------------------------------------------------------------------------------------------------------------------------------------
+- Minor patch and upgraded modules
+
+Version 1.0
+---------------------------------------------------------------------------------------------------------------------------------------------
+Requirement:
+- Requires a git account 
+- Chrome sync must be enabled
+
+Functionality
+- Automatically enables auto syncing to git.
+- Encryption of data that is been sync to git
+- No limit on the number of devices to be supported as long as Chrome is installed
 
 ## LICENSE
 MIT

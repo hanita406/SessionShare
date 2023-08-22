@@ -3,7 +3,7 @@ SessionShare is a chrome extension to synchronize your session across multiple d
 
 You can specify to sync cookies for any website, configure rules for `Auto Merge` and `Auto Push`.
 
-## Scenes to be used
+## Use cases
 ### Avoid frequent logins
 Some cookies that remain login status will expire when the browser is closed, which causes us to log in frequently.
 
